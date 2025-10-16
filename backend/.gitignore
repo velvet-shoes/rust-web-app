@@ -1,0 +1,8 @@
+target
+.env
+debug
+Cargo.lock
+migrations
+users_db.db
+notes_db.db
+diesel.toml
