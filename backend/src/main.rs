@@ -57,7 +57,7 @@ async fn main() -> std::io::Result<()> {
                     web::scope("/notes")
                         .wrap(MiddleWareJwT::new(sec_key.clone()))
                         .service(routes::notes_routes::create_note)
-                        // .service(routes::notes_routes::read_note) // not implemented in frontend
+                        .service(routes::notes_routes::read_note)
                         .service(routes::notes_routes::update_note)
                         .service(routes::notes_routes::delete_note)
                         .service(routes::notes_routes::get_all_notes)
